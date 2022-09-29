@@ -151,7 +151,7 @@
                         <fail>${platform.check.fail-enforcer}</fail>
                         <failFast>false</failFast>
                         <rules>
-                            <requirePluginVersions />
+                            <requirePluginVersions/>
                             <bannedDependencies>
                                 <excludes>
                                     <!-- clashes with commons-logging:commons-logging -->
@@ -187,8 +187,8 @@
                                     <include>junit:junit:[4.11,)</include>
                                 </includes>
                             </bannedDependencies>
-                            <banDuplicatePomDependencyVersions />
-                            <requireUpperBoundDeps />
+                            <banDuplicatePomDependencyVersions/>
+                            <requireUpperBoundDeps/>
                             <requireMavenVersion>
                                 <version>3.2.3</version>
                             </requireMavenVersion>
@@ -708,7 +708,7 @@
             <dependency>
                 <groupId>com.proofpoint.platform</groupId>
                 <artifactId>jaxrs</artifactId>
-                <version>2.64-SNAPSHOT</version>
+                <version>2.68</version>
             </dependency>
 
             <dependency>
@@ -752,7 +752,7 @@
             <dependency>
                 <groupId>com.proofpoint.platform</groupId>
                 <artifactId>node</artifactId>
-                <version>2.64-SNAPSHOT</version>
+                <version>2.66</version>
             </dependency>
 
             <dependency>
@@ -1609,7 +1609,7 @@
                                 <mapping>
                                     <directory>/opt/proofpoint/${project.artifactId}/lib</directory>
                                     <directoryIncluded>true</directoryIncluded>
-                                    <dependency />
+                                    <dependency/>
                                     <!-- Manually include the JAR containing the application code -->
                                     <sources>
                                         <source>
@@ -1638,7 +1638,7 @@
                                 </mapping>
                             </mappings>
                             <preinstallScriptlet>
-                                <script>if ! id ${project.rpm.username} &gt;/dev/null ; then exit 1; fi</script>
+                                <script>if ! id ${project.rpm.username} >/dev/null ; then exit 1; fi</script>
                             </preinstallScriptlet>
                             <preremoveScriptlet>
                                 <script>/sbin/service ${project.artifactId} stop</script>
